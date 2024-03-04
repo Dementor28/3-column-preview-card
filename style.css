@@ -8,8 +8,32 @@
 }
   
 
-.attribution { font-size: 11px; text-align: center; display: flex;}
+.attribution{
+    position: fixed;
+    width: 100%;
+    bottom:0;
+    padding-left: 35px;
+    transition: transform 0.5s ease-in-out; 
+}
+
 .attribution a { color: hsl(228, 45%, 44%); }
+
+/* h1{
+    font-family:Arial, Helvetica, sans-serif;
+    display: flex;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding-left: 35px;
+} */
+
+h1 {
+    position:fixed;
+    left: 0;
+    top: 0; 
+    padding-left: 5%;
+    color: #050505; font-family: 'Lato', sans-serif; font-size: 4vw; font-weight: 300; line-height: 58px;
+}
 
 body{
     min-height: 100vh;
@@ -47,9 +71,18 @@ body{
     flex-grow: 1;
 }
 
-.first button{
-    color: #d4873a;
+.first{
+    color:#d4873a;
 }
+
+.second{
+    color:#008080;
+}
+
+.third{
+    color:#005555;
+}
+
 .cardItem button{
     background-color: hsl(0, 0%, 95%);
     padding: 15px 30px;
@@ -65,6 +98,29 @@ body{
 }
 
 /* Responsive Layout for the coloumns */
-@media screen and (max-width: 600px){
-    .cardItem{ width:100%}
+@media screen and (max-width: 550px){
+
+    h1{
+        position:absolute;
+        padding-left: 50px;
+        text-align:center;
+    }
+    body{
+        background-color: bisque;
+        padding: 50px 20px;
+    }
+    .cards{
+        flex-direction: column;
+    }
+
+    .attribution {
+        position:fixed;
+      }
+    
+      .cardItem {
+        padding: 20px;
+      }
+
+
+
 }
